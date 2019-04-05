@@ -1,0 +1,32 @@
+#
+# Features
+#
+useClassFeature=true
+1.useNGrams=true
+1.maxNGramLeng=1
+1.minNGramLeng=1
+1.splitWordCount=true
+1.lowercaseNGrams=true
+#
+# Printing
+#
+# printClassifier=HighWeight
+printClassifierParam=0
+#
+# Mapping
+#
+goldAnswerColumn=0
+displayedColumn=1
+#
+# Optimization
+#
+intern=true
+sigma=3
+useQN=true
+QNsize=15
+tolerance=1e-4
+#
+# Training input
+#
+trainFile=./examples/tran.train
+testFile=./examples/tran.test

@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>JLIS-sequence</artifactId>
+  	<parent>
+		<groupId>edu.illinois.cs.cogcomp</groupId>
+		<artifactId>JLIS-all</artifactId>
+		<version>0.5</version>
+		<relativePath>../JLIS-all/pom.xml</relativePath>
+	</parent>
+  
+	<dependencies>
+		<dependency>
+			<groupId>edu.illinois.cs.cogcomp</groupId>
+			<artifactId>JLIS-core</artifactId>
+			<version>0.5</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+<!--				<configuration>-->
+<!--					<archive>-->
+<!--						<manifest>-->
+<!--							<addClasspath>true</addClasspath>-->
+<!--							<mainClass>edu.illinois.cs.cogcomp.indsup.seqdemo.MainClass</mainClass>-->
+<!--							<classpathPrefix>/home/roth/mchang21/.m2/repository/</classpathPrefix>-->
+<!--							<classpathMavenRepositoryLayout>true</classpathMavenRepositoryLayout>-->
+<!--						</manifest>-->
+<!--					</archive>-->
+<!--				</configuration>-->
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+
+  
+  
+</project>

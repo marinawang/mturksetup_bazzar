@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link rel="stylesheet" href="./compiled/flipclock.css">
+<script src="./compiled/flipclock.js"></script>	
+</head>
+<body>
+ <div class="clock" style="margin:2em;"></div>
+ <script type="text/javascript">
+  var clock;
+    $(document).ready(function(){
+        
+        	// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(2015,2,17,15,50,0);
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+	
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+
+    });
+
+	</script>
+	
+	  <!-- Main jumbotron for a primary marketing message or call to action -->
+   
+    <div class="main">
+     <p><strong><font size="6">Brainstorming with a team of Turkers</strong></font></p>
+        <div class="login well">
+            <div class="instructions">Please enter your (1) MTurk ID and (2) one idea about how to improve the Amazon Mturk site. We will match you to a team.</div>
+            <br>
+            <div class="form">
+                <form method="get" action="pretask.html">
+                    Mturk ID:<br>
+                    <input size="20" name="wid" />
+                    <br>
+                    One idea for how to improve the Amazon Mturk site:<br>
+                    <input size="100" name="idea" />
+                    <br>
+                    <input type="submit" class = "button blue brackets" value="Submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+  
+</body>
+</html>

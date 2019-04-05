@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Class-Path: .
+Main-Class: mturk.DB
+
+Name: common
+Implementation-Vendor: Oracle
+Implementation-Title: MySQL Connector/J
+Implementation-Version: 5.1.24
+Implementation-Vendor-Id: com.mysql
+Specification-Vendor: Sun Microsystems Inc.
+Specification-Title: JDBC
+Specification-Version: 4.0
+
+Name: com/sun/jna/
+Export-Package: com.sun.jna,com.sun.jna.ptr,com.sun.jna.win32
+Bundle-ActivationPolicy: lazy
+Implementation-Title: com.sun.jna
+Implementation-Version: 3.4.0 (b541)
+Specification-Vendor: JNA Development Team
+Bundle-Name: jna
+Bundle-NativeCode: com/sun/jna/win32-x86/jnidispatch.dll; processor=x8
+ 6;osname=win32, com/sun/jna/win32-amd64/jnidispatch.dll; processor=x8
+ 6-64;osname=win32, com/sun/jna/w32ce-arm/jnidispatch.dll; processor=a
+ rm;osname=wince,  com/sun/jna/sunos-x86/libjnidispatch.so; processor=
+ x86;osname=sunos, com/sun/jna/sunos-amd64/libjnidispatch.so; processo
+ r=x86-64;osname=sunos, com/sun/jna/sunos-sparc/libjnidispatch.so; pro
+ cessor=sparc;osname=sunos, com/sun/jna/sunos-sparcv9/libjnidispatch.s
+ o; processor=sparcv9;osname=sunos,  com/sun/jna/linux-ppc/libjnidispa
+ tch.so; processor=ppc;osname=linux, com/sun/jna/linux-ppc64/libjnidis
+ patch.so; processor=ppc64;osname=linux, com/sun/jna/linux-i386/libjni
+ dispatch.so; processor=x86;osname=linux, com/sun/jna/linux-amd64/libj
+ nidispatch.so; processor=x86-64;osname=linux, com/sun/jna/linux-arm/l
+ ibjnidispatch.so; processor=arm;osname=linux, com/sun/jna/linux-ia64/
+ libjnidispatch.so; processor=ia64;osname=linux,  com/sun/jna/openbsd-
+ i386/libjnidispatch.so; processor=x86;osname=openbsd, com/sun/jna/fre
+ ebsd-i386/libjnidispatch.so; processor=x86;osname=freebsd, com/sun/jn
+ a/freebsd-amd64/libjnidispatch.so; processor=x86-64;osname=freebsd,  
+ com/sun/jna/darwin/libjnidispatch.jnilib; osname=macos,
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Implementation-Vendor: JNA Development Team
+Bundle-Vendor: JNA Development Team
+Bundle-Version: 3
+Bundle-ManifestVersion: 2
+Specification-Title: Java Native Access (JNA)
+Bundle-Description: JNA Library
+Specification-Version: 3
+Bundle-SymbolicName: com.sun.jna
+

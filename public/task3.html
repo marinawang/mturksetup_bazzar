@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<script>
+$(function(){
+
+var x = document.URL;
+console.log(x);
+var rubric0 = 0;
+$("input[name*='rubric_0']").click(function () {
+rubric0++;
+document.getElementById("rubric0").innerHTML = rubric0;
+});
+var rubric1 = 0;
+$("input[name*='rubric_1']").click(function () {
+rubric1 ++;
+document.getElementById("rubric1").innerHTML = rubric1;
+});
+var rubric2 = 0;
+$("input[name*='rubric_2']").click(function () {
+rubric2 ++;
+document.getElementById("rubric2").innerHTML = rubric2;
+});
+var rubric3 = 0;
+$("input[name*='rubric_3']").click(function () {
+rubric3 ++;
+document.getElementById("rubric3").innerHTML = rubric3;
+});
+});
+</script>
+<b>Task Description</b><br>
+
+Your proposal is making a recommendation to the administration of City A, which has to choose one type of energy source from coal power, wind power, nuclear power and hydro power based on the requirements below. 
+In your proposal, <b>please argue for an energy that is environmentally friendly energy and reliable</b>, and list what were the trade offs you considered in making your choices.<br>
+<br>
+
+City A's requirements:<br>
+1. The city is concerned with heavy metal waste.<br>
+2. The city is a famous tourist city for its natural bird and fish habitats.<br>
+3. The city is trying to reduce greenhouse gas emissions.<br>
+4. The city needs a stable and reliable energy source.<br>
+5. The city prefers affordable energy.<br>
+
+<br>
+
+
+<script>
+</script>
+</body>
+</html>

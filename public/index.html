@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mturk</title>
+    <style> 
+    .hidden { visibility: hidden;}
+    </style>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="./compiled/flipclock.css">
+  <script src="./compiled/flipclock.js"></script>	
+  <script>
+  	 var urls = ["https://www.youtube.com/embed/XCfFde-8aAE","https://www.youtube.com/embed/nlpD6BT0YuM","https://www.youtube.com/embed/96ejyj68IqE","https://www.youtube.com/embed/G3Dd5eBh7N4"];
+	  var socket = io();
+	  socket.on('video', function (data) {
+	   var clock;
+	     
+	      $(document).ready(function() {	      
+	           	document.getElementById("video").src = urls[(data.uid-1)%4];	      
+	      	document.getElementById("forumurl").value = data.uid;
+	      	 console.log(urls[(data.uid-1)%4]);	  
+	    socket.emit('my other event', { my: 'data' });
+	
+	      var currentDate = new Date();
+		var futureDate  = new Date(Date.UTC(2015, 3, 13, 1, 0, 0));
+	   
+		var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+		 console.log("here  "+futureDate.toString()+"  "+diff+"  "+document.getElementById("countdown").style.visibility
+		 +"  "+document.getElementById("countdown").style.display);
+		  if(diff>0){
+		clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true,
+					showSeconds: true
+				});
+	      
+	 
+		     setTimeout(function(){ 
+		     	 alert("Please start the task, thanks!");
+		     	 document.getElementById("instructions").style.visibility = "visible"; 
+		         document.getElementById("starttask").style.display = "none"; 
+		         document.getElementById("countdown").style.display = "none";
+		         document.getElementById("forumurl").style.visibility = "hidden"; 
+		      }, diff*1000);
+		  }else{
+		 		 document.getElementById("instructions").style.visibility = "visible"; 
+		         document.getElementById("starttask").style.display = "none"; 
+		         document.getElementById("countdown").style.display = "none";
+		         document.getElementById("forumurl").style.visibility = "hidden"; 
+		  
+		  }		      
+		      });
+     
+	  });
+	 
+	  
+	
+  </script>
+  <body>
+     <div class="main">
+     <div id="countdown" class="clock" style="margin:2em;"></div>     
+     <div id="starttask" class="task">This task will start at 2015-4-12 9:00:0 EST. Please do not close this page, there will be a pop-up window notification when the task starts. Thanks!</div> 
+     <div id="instructions" class="hidden">
+     <p><strong><font size="6">Step 1/3: Watch a video lecture</strong></font></p>
+        <div class="login well">
+         	Please enter your (1) MTurk ID; (2) A nickname you'll use later in the forum discussion and collaboration; (2) Watch a video lecture.         
+            <br><br>
+            <div class="form">
+                <form id="url" method="get" action="pretask.html">
+                    Your Mturk ID:<br>
+                    <input id="value" size="20" name="wid" value=""/>
+                    <br>
+                    Your Nickname:<br>
+                    <input id="nickvalue" size="20" name="nickname" value=""/>
+                    <br>
+                    <iframe id ="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                    <br>
+                    After you finished watching the video, please click the following button to go to Step 2 
+                    <input id="forumurl" type="text" name="userforumurl" value=""><br>
+                    <input type="submit" class = "button blue brackets" value="Next Step" />
+                </form>
+            </div>
+        </div>
+       </div>
+    </div>
+    <!-- /container -->
+  </body>
+</html>

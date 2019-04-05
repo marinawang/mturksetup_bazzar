@@ -1,0 +1,127 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+#jar
+*.jar
+
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+38/
+39/
+40/
+63/
+64/
+65/
+66/
+67/
+68/
+69/
+102/
+142/
+159/
+160/
+161/
+162/
+163/
+164/
+165/
+166/
+167/
+168/
+169/
+170/
+174/
+175/
+176/
+177/
+178/
+179/
+180/
+182/
+185/
+186/
+187/
+191/
+192/
+193/
+194/
+195/
+201/
+202/
+203/
+205/
+206/
+207/
+209/
+210/
+211/
+212/
+213/
+214/
+215/
+216/
+219/
+220/
+221/
+222/
+223/
+224/
+227/
+228/
+230/
+231/
+234/
+235/
+237/
+238/
+239/
+240/
+241/
+242/
+243/
+244/
+245/
+246/
+247/
+
